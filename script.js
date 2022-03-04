@@ -20,12 +20,12 @@ function loadSong(song){
     cover.src = `images/${song}.jpg`
 }
 function playSong(){
-    musicContainer.classList.add('play')
-    playBtn.querySelector('i.fas').classList.remove('fa-play')
-    playBtn.querySelector('i.fas').classList.add('fa-pause')
-    audio.play()
+    musicContainer.classList.add('play');
+    playBtn.querySelector('i.fas').classList.remove('fa-play');
+    playBtn.querySelector('i.fas').classList.add('fa-pause');
+    audio.play();
 }
-function pauseSong{
+function pauseSong(){
     musicContainer.classList.remove('play')
     playBtn.querySelector('i.fas').classList.add('fa-play')
     playBtn.querySelector('i.fas').classList.remove('fa-pause')
@@ -51,7 +51,7 @@ function nextSong(){
     }
 
 //event listeners
-playBtn.addEventListener('click',()=>
+playBtn.addEventListener('click',() =>
 {
     const isPlaying = musicContainer.classList.contains('play')
     
