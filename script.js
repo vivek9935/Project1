@@ -49,7 +49,19 @@ function nextSong(){
     loadSong(songs[songIndex])
     playSong()
     }
-
+    // for progress container to move
+function updateProgress(e){
+    const {duration,currentTime}=e.target
+    const progressPercent=(currentTime/duration)*100
+    progress.getElementsByClassName.width=`${progressPercent}%`
+}
+//change the length of progress by clicking
+function setProgress(e){
+const width = this.clientWidth
+const clickX=e.offsetX
+console.log(clickX)
+const duration = audio.duration
+}
 //event listeners
 playBtn.addEventListener('click',() =>
 {
@@ -64,3 +76,6 @@ playBtn.addEventListener('click',() =>
 })
 PrevBtn.addEventListener('click',prevSong)
 nextBtn.addEventListener('click',nextSong)
+audio.addEventListener('timeupdate',updateProgress)
+progressContainer.addEventListener('click'.setProgress)
+audio.addEventListener('ended',nextSong)
